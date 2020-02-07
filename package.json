@@ -1,0 +1,15 @@
+{
+  "name": "geo-text-to-json",
+  "version": "1.0.0",
+  "description": "Tools to convert geo coordinates in CSV to JSON and vice versa.",
+  "main": "geo-csv-to-json.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "csv": "^5.3.1",
+    "debug": "^4.1.1"
+  }
+}
