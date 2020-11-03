@@ -28,7 +28,7 @@ const json2csv = json => Object.values(json).join();
 
 // special gps location keys
 const location_json2csv = (json, path) => {
-  let csv = ["latitude", "longitude", "altitude", "accuracy", "timestamp", "time"]
+  let csv = ["latitude", "longitude", "altitude", "accuracy", "timestamp", "time", "description"]
     .map(k => (
       path 
         ? json[path][k] 
@@ -40,7 +40,7 @@ const location_json2csv = (json, path) => {
 };
 
 const jsonarr2csv = (json, path) =>
-["latitude", "longitude", "altitude", "accuracy", "timestamp", "time"].join()+"\n"+
+["latitude", "longitude", "altitude", "accuracy", "timestamp", "time", "description"].join()+"\n"+
   json.reduce((acc, o) => {
     acc = acc + location_json2csv(o, path) + "\n";
     return acc;

@@ -23,7 +23,9 @@ async function main() {
     skip_empty_lines: true
   });
 
-  console.log(records);
+  const recordsWithCoords = records.map(r => ({coords:r}));
+
+  console.log(JSON.stringify(recordsWithCoords, null, 2));
 }
 
 main();
